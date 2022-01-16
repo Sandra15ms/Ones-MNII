@@ -13,7 +13,7 @@ im_N = N
 cx = 0
 
 dt=0.0001             #discretitzacions                                        #dt_real = dt*t_0 = 0.0001*1s = 0.0001 s
-dx = 0.0003                                                                    #dx_real = dx*x_0 = dx*t_0*v_p = 0.0003*1s*343m/s = 0.1029 m 
+dx = 0.0003                                                                    #dx_real = dx*x_0 = dx*t_0*v_p = 0.0003*1s*343m/s = 0.1029 m --> 3m amb correcció
 
 C = 0.00001       #constants
 A_0 = 70         #amplitud constant
@@ -81,9 +81,9 @@ for n in range(2,t):         #comencem a calcular els temps n+1
 
   for j in range(0,N+1):
        if n < int(1/(2*dt*freq)):
-           T1[j,75+cx]=A_0*np.sin(2*np.pi*(freq*n*dt))           #fonts "converses" contínues
+           T1[j,75+cx]=A_0*np.sin(2*np.pi*(freq*n*dt))           #font
        else:
-           T1[j,75+cx]=0           #fonts "converses" contínues
+           T1[j,75+cx]=0                                         #font apagada
 
 
   
